@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Structual Elements</title>
+</head>
+
+<body>
+    <!-- The first element in the document, might include navigation, or things you want available across the application-->
+    <header>
+        <h1>Savannah Vaith</h1>
+        <img src="qa.jpg" alt="Hello friends" height="5%" width="5%"/>
+        <nav>
+            <h2>Main site navigation</h2>
+            <ol>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ol>
+        </nav>
+    </header>
+    <!-- Main content - there can only be one <main> in the page-->
+    <main>
+        <!-- Section = chunks of info, breaks up the page, must be followed by a <h(number)>-->
+        <section id="About">
+            <h1>About me</h1>
+            <p>Sav likes to eat</p>
+            <p>I like to walk milo</p>
+        </section>
+        <hr />
+        <section id="Hobbies">
+            <h1>Hobbies</h1>
+            <p>Add things you like to do here.. </p>
+        </section>
+        <hr />
+        <section id="techs">
+            <h1> Techologies</h1>
+            <ul>
+                <li>html</li>
+                <li>control+alt+down = copy</li>
+                <li>js</li>
+                <li>css</li>
+                <li>java</li>
+            </ul>
+            <!-- Breaking up sections further -->
+            <article>
+                <h2>Java</h2>
+                <p>Some particular news</p>
+            </article>
+            <article>
+                <h2>CSS</h2>
+                <p> some other news</p>
+            </article>
+        </section>
+        <hr />
+        <!-- Difference between div/section explained -->
+        <div class="not-important">
+            <!-- Less relevant but useful content -->
+            <aside>
+                <h2>Archive</h2>
+                <p> Information that isn't necessarily relevant to the main content but useful.. </p>
+            </aside>
+            <p>ALSO A FORM OF CONTENT-SEPARATION</p>
+        </div>
+    </main>
+    <!-- Footer things, extra links and so forth -->
+    <footer>
+        &copy; Savannah 2021
+    </footer>
+</body>
+
+</html>
