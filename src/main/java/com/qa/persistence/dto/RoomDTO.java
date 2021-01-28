@@ -13,5 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class RoomDTO {
 		private Long id;
+		String roomType;
+		String roomNumber;
 		private List<PersonDTO> people;
 }

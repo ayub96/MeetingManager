@@ -27,26 +27,45 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <img class="navbar-brand" src="../images/QA-logo.jpg" alt="QA Logo" width="50px" height="50px">
-            <a href="link/to/page" class="navbar-brand">Meeting Manager</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a href="./HomePage.html" class="navbar-brand">Room Manager</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a id="thisPage" class="nav-link active" aria-current="page" href="./HomePage.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="./HomePage.html">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./People.html">Create Person</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            People
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./Person/Create.html">Create</a></li>
+                            <li><a class="dropdown-item" href="#">Read</a></li>
+                            <li><a class="dropdown-item" href="#">Update</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./Rooms.html">Create Room</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Rooms
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./Room/Create.html">Create</a></li>
+                            <li><a class="dropdown-item" href="#">Read</a></li>
+                            <li><a class="dropdown-item" href="#">Update</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container">
         <div class="row">
             <img src="../images/cinema.jpg" id="cinema" alt="Cinema picture"></a>
@@ -97,7 +116,7 @@
 <footer>
     <div class="container">
         <hr />
-        <p>Copyright QA Cinemas 2018</p>
+        <p>Copyright Room Manager 2021</p>
     </div>
 </footer>
 

@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -27,10 +26,17 @@ public class Room {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	public Room(Long id) {
+	String roomType;
+	
+	String roomNumber;
+	
+	public Room(Long id, String roomType, String roomNumber) {
 		super();
 		this.id = id;
+		this.roomType = roomType;
+		this.roomNumber = roomNumber;
 	}
+
 
 	@OneToMany(mappedBy = "room", fetch = FetchType.EAGER)
 	@OnDelete(action = OnDeleteAction.CASCADE)

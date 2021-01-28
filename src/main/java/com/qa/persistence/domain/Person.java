@@ -35,10 +35,6 @@ public class Person {
 	@NotNull
 	private String email;
 	
-//	@OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
-//	@OnDelete(action = OnDeleteAction.CASCADE)
-//	private List<Appointment> appointments;
-	
 	@ManyToOne
 	private Room room;
 	
