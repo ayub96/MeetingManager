@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Person</title>
+    <title>Read Room</title>
     <!-- Bootstrap CSS link here -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -25,7 +25,7 @@
                         <a class="nav-link" aria-current="page" href="../HomePage.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             People
                         </a>
@@ -37,7 +37,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Rooms
                         </a>
@@ -53,61 +53,42 @@
         </div>
     </nav>
     <div class="container">
-        <h1>Create Person</h1>
+        <h1>Read All Rooms</h1>
         <p>Getting user information, use it and store it, sent to a server for processing</p>
-        <fieldset>
-            <legend>Your details:</legend>
-            <form method="GET" action="" id="create">
-                <div class="row">
-                    <div class="col-md">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="createFirstName" name="createFirstName" required
-                                placeholder="First name" />
-                            <label for="createFirstName">First name:</label>
-                        </div>
-                    </div>
-                    <br />
-                    <div class="col-md">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="createSurname" name="createSurname"
-                                placeholder="Surname" />
-                            <label for="createSurname">Surname:</label>
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <div class="row">
-                    <div class="col-md">
-                        <div class="form-floating">
-                            <input type="email" class="form-control" id="createEmail" name="createEmail"
-                                placeholder="email" />
-                            <label for="createEmail">Email:</label>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="form-floating">
-                            <input type="number" class="form-control" id="roomId" name="roomId"
-                                placeholder="Room ID:" />
-                            <label for="roomId">Room ID (optional):</label>
-                        </div>
-                    </div>
-                </div>
-                
-                <br />
-            </form>
-        </fieldset>
+
         <div class="row">
             <div class="col-md">
-                <button type="button" id="createPersonButton" class="btn btn-success"> Submit </button>
-                <pre id="createOutput"></pre>
+                <button type="button" id="readAllRoomsBtn" class="btn btn-success"> Read All </button>
             </div>
         </div>
+        <br />
+
+        <div id="peeps" style="font-family: 'Courier New', Courier, monospace;" ></div>
+        <div id="peepers"></div>
+        
+        <br />
+        <h1>Read a Room</h1>
+        <p>Getting user information, use it and store it, sent to a server for processing</p>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="readRoomId" name="readRoomId" placeholder="Room ID:" />
+                    <label for="readRoomId">Room ID:</label>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md">
+                <button type="button" id="readRoomBtn" class="btn btn-success"> Read </button>
+            </div>
+        </div>
+        <br />
+        <div id="peep"></div>
+
+
     </div>
-
-    <div id="peep">
-
-    </div>
-
 
 
 
@@ -117,7 +98,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
-    <script src="/js/Person/ReqresCreatePersonAPI.js"></script>
+    <script src="/js/Room/ReqresReadRoomAPI.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
     <!-- onclick="createUsers()" -->
