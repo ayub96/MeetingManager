@@ -1,12 +1,7 @@
 'use strict';
 
-const BASE_URL = "http://localhost:8081";
-
-const createPersonButton = document.querySelector('#createPersonButton');
-const readAllPersonBtn = document.querySelector(`#readAllPersonBtn`)
-
 function createUsers() {
-    fetch(BASE_URL + `/person/create`, {
+    fetch(`http://localhost:8081/person/create`, {
         method: "POST",
         body: JSON.stringify({
             firstname: document.querySelector(`#createFirstName`).value,
@@ -22,7 +17,7 @@ function createUsers() {
         .then(json => console.log(json))
         .catch(err => console.error(`Error!!`, err));
 }
-createPersonButton.addEventListener('click', createUsers);
+document.querySelector('#createPersonButton').addEventListener('click', createUsers);
 
 // const retrieveData = () => {
 //     console.log("hello");
