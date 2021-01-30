@@ -35,6 +35,7 @@ public class Person {
 	@NotNull
 	private String email;
 	
+	
 	@ManyToOne
 	private Room room;
 	

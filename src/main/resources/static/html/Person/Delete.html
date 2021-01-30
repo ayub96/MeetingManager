@@ -53,23 +53,33 @@
         </div>
     </nav>
     <div class="container">
-        <h1>Delete Person</h1>
-        <p>Getting user information, use it and store it, sent to a server for processing</p>
-
         <div class="row">
             <div class="col-md">
+                <h1>Delete Person</h1>
+                <p>Getting user information, use it and store it, sent to a server for processing</p>
                 <div class="form-floating">
                     <input type="number" class="form-control" id="personId" name="personId" placeholder="Person ID:" />
                     <label for="personId">Person ID:</label>
                 </div>
+                <br />
+                <div class="row">
+                    <div class="col-md">
+                        <button type="button" id="delPersonBtn" class="btn btn-success"> Delete </button>
+                    </div>
+                </div>
             </div>
-        </div>
-        <br />
-        <div class="row">
             <div class="col-md">
-                <button type="button" id="delPersonBtn" class="btn btn-success"> Delete </button>
+                <h1>Delete All People</h1>
+                <br />
+                <div class="row">
+                    <div class="col-md">
+                        <button type="button" id="delAllPeople" class="btn btn-success"> Delete All </button>
+                    </div>
+                </div>
             </div>
         </div>
+        
+
         <br />
 
         <div id="peep">
