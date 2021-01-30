@@ -2,8 +2,6 @@ package com.qa.rest;
 
 import java.util.List;
 
-import javax.websocket.server.PathParam;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.qa.persistence.domain.Person;
 import com.qa.persistence.dto.PersonDTO;
 import com.qa.services.PersonService;
 
@@ -34,7 +33,7 @@ public class PersonController {
 	}
 	
 	@PostMapping("/create")
-	public ResponseEntity<PersonDTO> createPerson(@RequestBody PersonDTO model){
+	public ResponseEntity<PersonDTO> createPerson(@RequestBody Person model){
 		return new ResponseEntity<>(this.service.create(model), HttpStatus.CREATED);
 	}
 	
@@ -55,7 +54,7 @@ public class PersonController {
 	}
 	
 	@PutMapping("/update/{id}")
-	public ResponseEntity<PersonDTO> updatePerson(@PathParam("id") Long id, @RequestBody PersonDTO model){
+	public ResponseEntity<PersonDTO> updatePerson(@PathVariable("id") Long id, @RequestBody Person model){
 		return new ResponseEntity<>(this.service.update(model, id), HttpStatus.ACCEPTED);
 	}
 	

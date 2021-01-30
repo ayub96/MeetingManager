@@ -54,23 +54,31 @@
     </nav>
 
     <div class="container">
-        <h1>Delete Room</h1>
-        <p>Getting user information, use it and store it, sent to a server for processing</p>
-
         <div class="row">
             <div class="col-md">
+                <h1>Delete a Room</h1>
                 <div class="form-floating">
                     <input type="number" class="form-control" id="deleteRoomId" name="deleteRoomId" placeholder="Room ID:" />
                     <label for="deleteRoomId">Room ID:</label>
                 </div>
+                <br />
+                <div class="row">
+                    <div class="col-md">
+                        <button type="button" id="delRoomBtn" class="btn btn-success"> Delete </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <h1>Delete all Rooms</h1>
+                <div class="row">
+                    <div class="col-md">
+                        <button type="button" id="delAllRoomsBtn" class="btn btn-success"> Delete All </button>
+                    </div>
+                </div>
             </div>
         </div>
         <br />
-        <div class="row">
-            <div class="col-md">
-                <button type="button" id="delRoomBtn" class="btn btn-success"> Delete </button>
-            </div>
-        </div>
+ 
         <br />
 
         <div id="peep">

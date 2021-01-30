@@ -1,13 +1,15 @@
 'use strict';
 
 function createUsers() {
+    let data = {};
+    data["id"] = document.querySelector(`#roomId`).value;
     fetch(`http://localhost:8081/person/create`, {
         method: "POST",
         body: JSON.stringify({
             firstname: document.querySelector(`#createFirstName`).value,
             surname: document.querySelector(`#createSurname`).value,
             email: document.querySelector(`#createEmail`).value,
-            room_id: document.querySelector(`#roomId`).value
+            room: data
         }),
         headers: {
             "Content-Type": "application/json"

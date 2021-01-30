@@ -1,6 +1,8 @@
 'use strict';
 
-const updateFunction = () => {  
+const updateFunction = () => { 
+    let data = {};
+    data.id = document.querySelector(`#UpdateRoomId`).value; 
     fetch(`http://localhost:8081/person/update/` + document.querySelector(`#updatePersonId`).value, {
         method: `PUT`,
         body: JSON.stringify({
@@ -8,7 +10,7 @@ const updateFunction = () => {
             firstname: document.querySelector(`#updateFirstName`).value,
             surname: document.querySelector(`#updateSurname`).value,
             email: document.querySelector(`#updateEmail`).value,
-            room_id: document.querySelector(`#updateRoomId`).value
+            room: data
         }),
         headers:{
             "Content-Type": "application/json"
