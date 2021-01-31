@@ -1,9 +1,6 @@
 package com.qa.demo.rest;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 import org.junit.jupiter.api.Test;
 import org.modelmapper.ModelMapper;
@@ -12,7 +9,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
@@ -25,9 +21,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qa.SpringStarterApplication;
 import com.qa.persistence.domain.Room;
-import com.qa.persistence.domain.Person;
 import com.qa.persistence.dto.RoomDTO;
-import com.qa.persistence.dto.PersonDTO;
 
 @SpringBootTest(classes = SpringStarterApplication.class)
 @AutoConfigureMockMvc

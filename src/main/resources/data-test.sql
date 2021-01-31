@@ -1,11 +1,8 @@
-INSERT INTO customer(firstname, surname, email) VALUES
-('John', 'Smith', 'john@gmail.com'),
-('James', 'Jones', 'james@gmail.com'),
-('Rob', 'Jackson', 'mike@gmail.com'),
-('Paul', 'Rogers', 'paul@gmail.com'),
-('Tim', 'Jones', 'tim@gmail.com');
+INSERT INTO room(room_type, room_number) VALUES 
+('Meeting Room', '800A'),
+('Cafe', '909B');
 
-INSERT INTO appointment(appointment_type, date_placed, customer_id) VALUES 
-('Haircut', '2000-01-01 00:00:00', 2),
-('Beard trim', '2000-01-01 00:00:00', 1),
-('Clean shave', '2000-01-01 00:00:00', 1);
+INSERT INTO person(firstname, surname, email, room_id) VALUES
+('John', 'Smith', 'john@gmail.com', 1),
+('Peter', 'Jones', 'peter@gmail.com', 1),
+('James', 'Jones', 'james@gmail.com', 2);
