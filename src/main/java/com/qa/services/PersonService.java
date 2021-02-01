@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.qa.Utils.MyBeanUtils;
 import com.qa.persistence.domain.Person;
 import com.qa.persistence.dto.PersonDTO;
 import com.qa.persistence.repo.PersonRepo;
@@ -28,13 +29,8 @@ public class PersonService {
 		return this.mapper.map(model, PersonDTO.class);
 	}
 	
-	private Person mapFromDTO(PersonDTO model) {
-		return this.mapper.map(model, Person.class);
-	}
-	
-	public PersonDTO create(PersonDTO model) {
-		Person toSave = this.mapFromDTO(model);
-		Person saved = this.repo.save(toSave);
+	public PersonDTO create(Person model) {
+		Person saved = this.repo.save(model);
 		return this.mapToDTO(saved);
 	}
 	
@@ -51,11 +47,9 @@ public class PersonService {
 		return this.repo.findAll().stream().map(this::mapToDTO).collect(Collectors.toList());
 	}
 	
-	public PersonDTO update(PersonDTO model, Long id) {
-		Person toUpdate = this.repo.findById(id).orElseThrow();
-		toUpdate.setFirstname(model.getFirstname());
-		toUpdate.setSurname(model.getSurname());
-		toUpdate.setEmail(model.getEmail());
-		return this.mapToDTO(this.repo.save(toUpdate));
+	public PersonDTO update(Person person, Long id) {
+		Person updatedPerson = this.repo.findById(id).orElseThrow();
+		MyBeanUtils.mergeNotNull(person, updatedPerson);	// merges the properties between them including null gaps, ensures no errors occur due to null
+		return this.mapToDTO(this.repo.save(updatedPerson));
 	}
 }

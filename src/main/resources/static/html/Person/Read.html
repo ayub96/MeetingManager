@@ -30,10 +30,10 @@
                             People
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="../Person/Create.html">Create</a></li>
-                            <li><a class="dropdown-item" href="#">Read</a></li>
-                            <li><a class="dropdown-item" href="#">Update</a></li>
-                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                            <li><a class="dropdown-item" id=createPBtn href="/html/Person/Create.html">Create</a></li>
+                            <li><a class="dropdown-item" id=readPBtn href="/html/Person/Read.html">Read</a></li>
+                            <li><a class="dropdown-item" id=updatePBtn href="/html/Person/Update.html">Update</a></li>
+                            <li><a class="dropdown-item" id=deletePBtn href="/html/Person/Delete.html">Delete</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -42,55 +42,39 @@
                             Rooms
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="../Room/Create.html">Create</a></li>
-                            <li><a class="dropdown-item" href="#">Read</a></li>
-                            <li><a class="dropdown-item" href="#">Update</a></li>
-                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                            <li><a class="dropdown-item" id=createRBtn href="/html/Room/Create.html">Create</a></li>
+                            <li><a class="dropdown-item" id=readRBtn href="/html/Room/Read.html">Read</a></li>
+                            <li><a class="dropdown-item" id=updateRBtn href="/html/Room/Update.html">Update</a></li>
+                            <li><a class="dropdown-item" id=deleteRBtn href="/html/Room/Delete.html">Delete</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+
+    
     <div class="container">
-        <h1>Read All People</h1>
-        <p>Getting user information, use it and store it, sent to a server for processing</p>
-
         <div class="row">
             <div class="col-md">
-                <button type="button" id="readAllPersonBtn" class="btn btn-success"> ReadAll </button>
+                <h1>Read All People</h1>
+                <button type="button" id="readAllPersonBtn" class="btn btn-success"> Read All </button>
+                <pre id="peeps"></pre>
             </div>
-        </div>
-        <br />
-
-        <div id="peeps">
-
-        </div>
-        <br />
-        <h1>Read Person</h1>
-        <p>Getting user information, use it and store it, sent to a server for processing</p>
-
-        <div class="row">
             <div class="col-md">
+                <h1>Read A Person</h1>
                 <div class="form-floating">
-                    <input type="number" class="form-control" id="personId" name="personId" placeholder="Person ID:" />
-                    <label for="personId">Person ID:</label>
+                    <input type="number" class="form-control" id="readPersonId" name="readPersonId"
+                        placeholder="Person ID:" />
+                    <label for="readPersonId">Person ID:</label>
+                    <br />
+                    <button type="button" id="readPersonBtn" class="btn btn-success"> Read </button>
+                    <pre id="peep"></div></pre>
                 </div>
             </div>
         </div>
         <br />
-        <div class="row">
-            <div class="col-md">
-                <button type="button" id="readPersonBtn" class="btn btn-success"> Read </button>
-            </div>
-        </div>
-        <br />
-
-        <div id="peep">
-
-        </div>
-
-
     </div>
 
 

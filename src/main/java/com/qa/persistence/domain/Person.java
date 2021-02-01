@@ -35,6 +35,7 @@ public class Person {
 	@NotNull
 	private String email;
 	
+	
 	@ManyToOne
 	private Room room;
 	
@@ -45,10 +46,13 @@ public class Person {
 		this.email = email;
 	}
 	
-	public Person(String firstname, String surname, String email) {
+	public Person(String firstname, String surname, String email) {		// for testing
+		super();
+		this.id = 0L;
 		this.firstname = firstname;
 		this.surname = surname;
 		this.email = email;
+		this.room = null;
 	}
 
 	

@@ -7,9 +7,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.qa.persistence.domain.Person;
+import com.qa.Utils.MyBeanUtils;
 import com.qa.persistence.domain.Room;
-import com.qa.persistence.dto.PersonDTO;
 import com.qa.persistence.dto.RoomDTO;
 import com.qa.persistence.repo.RoomRepo;
 
@@ -44,9 +43,10 @@ public class RoomService {
 		return roomsDTO;
 	}
 	
-	public RoomDTO update(Long id, Room appointment) {		
-		Room updatedApp = this.repo.findById(id).orElseThrow();
-		return this.mapToDTO(this.repo.save(updatedApp));
+	public RoomDTO update(Long id, Room room) {		
+		Room updatedRoom = this.repo.findById(id).orElseThrow();
+		MyBeanUtils.mergeNotNull(room, updatedRoom);
+		return this.mapToDTO(this.repo.save(updatedRoom));
 	}
 	
 	public boolean delete(Long id) {
