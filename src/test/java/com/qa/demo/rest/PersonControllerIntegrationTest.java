@@ -48,6 +48,7 @@ public class PersonControllerIntegrationTest {
 	
 	// CREATE
 	
+	@Test
 	public void createPerson() throws Exception{
 	
 		Person TEST_PERSON_DOMAIN = new Person("John", "Smith", "john@gmail.com");
@@ -63,6 +64,8 @@ public class PersonControllerIntegrationTest {
 		
 		ResultMatcher matchContent = MockMvcResultMatchers.content().json(this.jsonifier.writeValueAsString(mapToDTO(TEST_PERSON_DOMAIN)));	// content we get back
 		ResultMatcher matchStatus = MockMvcResultMatchers.status().isCreated();
+		
+		TEST_PERSON_DOMAIN.setId(0L);
 		
 		// Perform & Assert
 		this.mock.perform(mockRequest)	// perform out API request we set up
@@ -99,6 +102,7 @@ public class PersonControllerIntegrationTest {
 	
 	@Test
 	public void readAllPeople() {
+
 		
 	}
 	

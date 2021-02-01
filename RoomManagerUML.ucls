@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <interface id="1" language="java" name="com.qa.persistence.repo.RoomRepo" project="MeetingManager" 
     file="/MeetingManager/src/main/java/com/qa/persistence/repo/RoomRepo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1326" y="810"/>    
+    <position height="-1" width="-1" x="1108" y="832"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </interface>  
   <class id="2" language="java" name="com.qa.services.RoomService" project="MeetingManager" 
     file="/MeetingManager/src/main/java/com/qa/services/RoomService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1088" y="808"/>    
+    <position height="-1" width="-1" x="870" y="830"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="com.qa.persistence.dto.PersonDTO" project="MeetingManager" 
     file="/MeetingManager/src/main/java/com/qa/persistence/dto/PersonDTO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="619" y="311"/>    
+    <position height="-1" width="-1" x="401" y="333"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="com.qa.services.PersonService" project="MeetingManager" 
     file="/MeetingManager/src/main/java/com/qa/services/PersonService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1089" y="309"/>    
+    <position height="-1" width="-1" x="871" y="331"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="com.qa.persistence.domain.Room" project="MeetingManager" 
     file="/MeetingManager/src/main/java/com/qa/persistence/domain/Room.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="402" y="818"/>    
+    <position height="-1" width="-1" x="1288" y="886"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="com.qa.rest.RoomController" project="MeetingManager" 
     file="/MeetingManager/src/main/java/com/qa/rest/RoomController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="840" y="801"/>    
+    <position height="-1" width="-1" x="622" y="823"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="com.qa.rest.PersonController" project="MeetingManager" 
     file="/MeetingManager/src/main/java/com/qa/rest/PersonController.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="810" y="309"/>    
+    <position height="-1" width="-1" x="592" y="331"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="com.qa.persistence.domain.Person" project="MeetingManager" 
     file="/MeetingManager/src/main/java/com/qa/persistence/domain/Person.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="399" y="320"/>    
+    <position height="-1" width="-1" x="1285" y="388"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -84,7 +84,7 @@
   </class>  
   <class id="10" language="java" name="com.qa.persistence.dto.RoomDTO" project="MeetingManager" 
     file="/MeetingManager/src/main/java/com/qa/persistence/dto/RoomDTO.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="618" y="812"/>    
+    <position height="-1" width="-1" x="400" y="834"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -111,7 +111,7 @@
   </class>  
   <interface id="13" language="java" name="com.qa.persistence.repo.PersonRepo" project="MeetingManager" 
     file="/MeetingManager/src/main/java/com/qa/persistence/repo/PersonRepo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1304" y="307"/>    
+    <position height="-1" width="-1" x="1086" y="329"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="false" protected="true" private="true" static="true"/>      
@@ -119,49 +119,73 @@
     </display>  
   </interface>  
   <association id="14">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="15" name="repo"/>      
-      <multiplicity id="16" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="15" name="room">        
+        <position height="0" width="0" x="886" y="68"/>      
+      </attribute>      
+      <multiplicity id="16" minimum="0" maximum="1">        
+        <position height="0" width="0" x="886" y="68"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="false" multiplicity="false"/>  
   </association>  
   <association id="17">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="18" name="service"/>      
-      <multiplicity id="19" minimum="0" maximum="1"/>    
+      <attribute id="18" name="service">        
+        <position height="0" width="0" x="-218" y="22"/>      
+      </attribute>      
+      <multiplicity id="19" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-218" y="22"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="false" multiplicity="false"/>  
   </association>  
   <association id="20">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="21" name="service"/>      
-      <multiplicity id="22" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="21" name="repo">        
+        <position height="0" width="0" x="-218" y="22"/>      
+      </attribute>      
+      <multiplicity id="22" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-218" y="22"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="false" multiplicity="false"/>  
   </association>  
   <association id="23">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="24" name="repo"/>      
-      <multiplicity id="25" minimum="0" maximum="1"/>    
+      <attribute id="24" name="repo">        
+        <position height="0" width="0" x="-218" y="22"/>      
+      </attribute>      
+      <multiplicity id="25" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-218" y="22"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="false" multiplicity="false"/>  
   </association>  
   <association id="26">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="27" name="room"/>      
-      <multiplicity id="28" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="27" name="service">        
+        <position height="0" width="0" x="-218" y="22"/>      
+      </attribute>      
+      <multiplicity id="28" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-218" y="22"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="false" multiplicity="false"/>  
   </association>  
   <association id="29">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="30" name="people"/>      
-      <multiplicity id="31" minimum="0" maximum="2147483647"/>    
+      <attribute id="30" name="people">        
+        <position height="0" width="0" x="886" y="68"/>      
+      </attribute>      
+      <multiplicity id="31" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="886" y="68"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="false" multiplicity="false"/>  
