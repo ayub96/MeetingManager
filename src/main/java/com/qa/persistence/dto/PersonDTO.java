@@ -13,6 +13,7 @@ public final class PersonDTO {
 	private String firstname;
 	private String surname;
 	private String email;
+	private Long roomId;
 	
 	
 	public PersonDTO(Long id, String firstname, String surname, String email) {
@@ -22,6 +23,15 @@ public final class PersonDTO {
 		this.surname = surname;
 		this.email = email;
 	} 
+	
+	public PersonDTO(Long id, String firstname, String surname, String email, Long roomId) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.surname = surname;
+		this.email = email;
+		this.roomId = roomId;
+	}
 	
 	
 	

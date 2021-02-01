@@ -1,5 +1,8 @@
 package com.qa.demo.rest;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +19,7 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qa.SpringStarterApplication;
 import com.qa.persistence.domain.Person;
@@ -44,28 +48,43 @@ public class PersonControllerIntegrationTest {
 	
 	private final int TEST_ID = 1;
 	
+//	private final Person testPerson = new Person(1L, "first", "sur", "email");
+	
+	
 	//=================================== TESTS ===================================
 	
 	// CREATE
 	
 	@Test
+	public void deletePerson() throws Exception{
+		MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders
+				.request(HttpMethod.DELETE, "/person/delete/" + 1L);
+		
+		ResultMatcher matchStatus = MockMvcResultMatchers.status().isNoContent();
+		
+		this.mock.perform(mockRequest).andExpect(matchStatus);
+	}
+	
+	@Test
 	public void createPerson() throws Exception{
 	
-		Person TEST_PERSON_DOMAIN = new Person("John", "Smith", "john@gmail.com");
+		Person TEST_PERSON = new Person("John", "Smith", "john@gmail.com");
 		
 		// Prepared REST request
-		MockHttpServletRequestBuilder mockRequest = 
-				MockMvcRequestBuilders.request(HttpMethod.POST, "/person/create/")
-					.contentType(MediaType.APPLICATION_JSON)	// the type of test like in postman
-					.content(this.jsonifier.writeValueAsString(TEST_PERSON_DOMAIN))	// translates a value into JSON, we dont need a body for read therefore comment out
-					.accept(MediaType.APPLICATION_JSON);
+		MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders
+				.request(HttpMethod.POST, "/person/create/")
+				.contentType(MediaType.APPLICATION_JSON)	// the type of test like in postman
+				.content(this.jsonifier.writeValueAsString(TEST_PERSON))	// translates a value into JSON, we dont need a body for read therefore comment out
+				.accept(MediaType.APPLICATION_JSON);
 		
 		// Assertion checks
+
+//		final Person TEST_PERSON_SAVED = new Person(2L, TEST_PERSON.getFirstname(), TEST_PERSON.getSurname(), TEST_PERSON.getEmail());
 		
-		ResultMatcher matchContent = MockMvcResultMatchers.content().json(this.jsonifier.writeValueAsString(mapToDTO(TEST_PERSON_DOMAIN)));	// content we get back
+		TEST_PERSON.setId(13L);
+		
+		ResultMatcher matchContent = MockMvcResultMatchers.content().json(this.jsonifier.writeValueAsString(this.mapToDTO(TEST_PERSON)));	// content we get back
 		ResultMatcher matchStatus = MockMvcResultMatchers.status().isCreated();
-		
-		TEST_PERSON_DOMAIN.setId(0L);
 		
 		// Perform & Assert
 		this.mock.perform(mockRequest)	// perform out API request we set up
@@ -78,7 +97,7 @@ public class PersonControllerIntegrationTest {
 	@Test
 	public void readPerson() throws Exception{
 		
-		PersonDTO TEST_PERSON = new PersonDTO(1L, "John", "Smith", "john@gmail.com");	// needs to match the response of out API request
+		PersonDTO TEST_PERSON = new PersonDTO(1L, "John", "Smith", "john@gmail.com", 1L);	// needs to match the response of out API request
 		
 		// Prepared REST request
 		MockHttpServletRequestBuilder mockRequest = 
@@ -101,22 +120,43 @@ public class PersonControllerIntegrationTest {
 	}
 	
 	@Test
-	public void readAllPeople() {
-
+	public void readAllPeople() throws Exception{
+		List<PersonDTO> personList = new ArrayList<>();
+		personList.add(new PersonDTO(1L, "fname", "sname", "email"));
+		personList.add(new PersonDTO(2L, "fname2", "sname2", "sname2"));
 		
+		MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders
+				.request(HttpMethod.GET, "/person/readAll")
+				.contentType(MediaType.APPLICATION_JSON)
+				.accept(MediaType.APPLICATION_JSON);
+		
+		ResultMatcher matchContent = MockMvcResultMatchers.content()
+				.json(this.jsonifier.writeValueAsString(personList));
+		ResultMatcher matchStatus = MockMvcResultMatchers.status().isOk();
+		
+		this.mock.perform(mockRequest).andExpect(matchStatus).andExpect(matchContent);
 	}
 	
 	// UPDATE
 	
 	@Test
-	public void updatePerson() {
+	public void updatePerson() throws Exception {
+		PersonDTO person = new PersonDTO(1L, "peter", "jackson", "peter@gmail.com");
 		
+		MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders
+				.request(HttpMethod.POST, "/person/update/" + TEST_ID)
+				.contentType(MediaType.APPLICATION_JSON)
+				.content(this.jsonifier.writeValueAsString(person))
+				.accept(MediaType.APPLICATION_JSON);
+		
+		ResultMatcher matchContent = MockMvcResultMatchers.content()
+				.json(this.jsonifier.writeValueAsString(person));
+		ResultMatcher matchStatus = MockMvcResultMatchers.status().isAccepted();
+		
+		this.mock.perform(mockRequest).andExpect(matchStatus).andExpect(matchContent);	
 	}
 	
 	// DELETE
 	
-	@Test
-	public void deletePerson() {
-		
-	}
+
 }
